@@ -224,10 +224,6 @@
     <Content Include="app\views\category\categories.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\item\items.html" />
-    <Content Include="App_Data\MWDB.mdf" />
-    <Content Include="App_Data\MWDB_log.ldf">
-      <DependentUpon>MWDB.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\andia-agency\assets\bootstrap\css\bootstrap.css" />
     <Content Include="Content\andia-agency\assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\andia-agency\assets\bootstrap\img\glyphicons-halflings-white.png" />
@@ -400,6 +396,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -793,10 +790,12 @@
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\VisualStudio\v14.0</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
