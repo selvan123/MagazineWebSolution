@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Admin Panel :: Dashboard</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/site.css" rel="stylesheet"/>
+    <link href="css/docs.css" rel="stylesheet"/>
+    <link href="css/pygments-manni.css" rel="stylesheet"/>
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <script src="js/modernizr-2.6.2.js"></script>
+</head>
+<body data-twttr-rendered="true">
+    <nav class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <b><a class="navbar-brand" href="/"><i class="fa fa-renren"></i> MAGAZINE ADMINISTRATION PAGE</a></b>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <!--
+                        <li><a href="#/dashboard"><i class="fa fa-home fa-fw"></i> Dashboard</a></li>
+                        <li><a href="#/categories"><i class="fa fa-book fa-fw"></i> Category</a></li>
+                        <li><a href="#/items"><i class="fa fa-fire"></i> Item</a></li>
+                        -->
+                    </ul>
+                <form action="/Account/LogOff" class="navbar-form navbar-left pull-right" id="logoutForm" method="post">                        
+                    <div class="nav navbar-nav ">
+                        <a href="#" class="btn">&nbsp;</a>
+                        <a class="wh" href="/Account/Manage">Hello thangchung!</a>
+                        <a href="javascript:document.getElementById('logoutForm').submit()" class="wh">Log off</a>
+                    </div>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="container bs-docs-container">       
+        <div class="row">
+            <div class="col-md-3">  
+                <div class="panel panel-purple menu padding-box">
+                    <div class="panel-heading">
+                        <b><i class="fa fa-book fa-fw"></i> Category</b>
+                        <div class="panel-tools panel-tools-center">                            
+                            <a class="btn tooltip-ex" href="#" data-original-title="add new category" data-placement="right">
+                                <i class="fa fa-plus"></i>
+                            </a>                            
+                        </div>
+                    </div>
+                    <div class="sidenav">
+                        <ul class="nav nav-sidenav">                        
+                            <li class="active hover-display">
+                                <a href="#sport"><i class="fa fa-angle-double-right"></i> Sport <span class="badge">2</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a> 
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a>  
+                                </div>
+                            </li>
+                            <li class="hover-display">
+                                <a href="#fashion"><i class="fa fa-angle-double-right"></i> Fashion <span class="badge">1</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a>  
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a>  
+                                </div>
+                            </li>
+                            <li class="hover-display">
+                                <a href="#news"><i class="fa fa-angle-double-right"></i> News <span class="badge">100</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a>   
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a> 
+                                </div>
+                            </li>
+                            <li class="hover-display">
+                                <a href="#music"><i class="fa fa-angle-double-right"></i> Music <span class="badge">1000</span></a>
+                                <div class="panel-tools panel-tools-item-center">                            
+                                    <a href="#" class="tooltip-ex" data-original-title="edit category" data-placement="right">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>                          
+                                    <a href="#" class="tooltip-ex" data-original-title="delete category" data-placement="right">
+                                        <i class="fa fa-times"></i>
+                                    </a>   
+                                    <a href="#" class="tooltip-ex" data-original-title="add more items..." data-placement="right">
+                                        <i class="fa fa-archive"></i>
+                                    </a> 
+                                </div>
+                            </li>               
+                        </ul>                                              
+                    </div>
+                </div>                  
+                <!-- add category panel -->
+                <div class="panel panel-purple padding-box">
+                    <div class="panel-heading">
+                        <b><i class="fa fa-file-text-o"></i> Add New Category</b>                        
+                    </div>
+                    <div class="panel-body">     
+                        <form class="form-inline" role="form">   
+                            <div class="input-group mgz-form-more-bottom">
+                              <span class="input-group-addon"><i class="fa fa-sort-alpha-desc fa-fw"></i></span>
+                              <input class="form-control" type="text" placeholder="Name">
+                            </div>  
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-terminal fa-fw"></i></span>
+                              <input class="form-control" type="text" placeholder="Description">
+                            </div>     
+                            <div class="form-group">
+                                <a href="#" class="btn btn-default btn btn-default-default navbar-btn btn-default"><i class="fa fa-floppy-o"></i> Save</a>
+                                <a href="#" class="btn btn-default btn btn-default-default navbar-btn btn-default"><i class="fa fa-undo"></i> Cancel</a>
+                            </div>                          
+                        </form>     
+                    </div> 
+                </div>
+            </div>              
+            <div class="col-md-9" role="main">
+                <!-- start right column -->
+
+                <div class="panel panel-purple padding-box">
+                    <div class="panel-heading">
+                        <b><i class="fa fa-file-text-o"></i> Add New Item</b>                        
+                    </div> 
+                    <div class="panel-body">
+                        <form class="form-inline" role="form">                            
+                            <div class="input-group mgz-form-more-bottom">
+                                <span class="input-group-addon">
+                                    <a href="#" class="tooltip-ex" data-original-title="Please input title for this item" data-placement="top">
+                                        <i class="fa fa-pagelines fa-fw"></i>
+                                    </a>
+                                </span>
+                                <input class="form-control" type="text" placeholder="Title">                                
+                            </div>
+                            <div class="input-group mgz-form-more-bottom">
+                                <span class="input-group-addon">
+                                    <a href="#" class="tooltip-ex" data-original-title="Please choose an image for this item" data-placement="top">
+                                        <i class="fa fa-file fa-fw"></i>
+                                    </a>
+                                </span>                                
+                                <input type="text" class="file" name="file-info">
+                                <span class="file-upload">
+                                    <input type="file" id="file-upload" name="file-upload">
+                                </span>                                                             
+                            </div>
+                            <div class="input-group mgz-form-more-bottom">
+                                <span class="input-group-addon">
+                                    <a href="#" class="tooltip-ex" data-original-title="Please select one category for this item" data-placement="top">
+                                        <i class="fa fa-book fa-fw"></i>
+                                    </a>
+                                </span>
+                                <select class="form-control">
+                                  <option>Sport</option>
+                                  <option>News</option>
+                                  <option>Fashion</option>                                  
+                                </select>                                
+                            </div>
+                            <div class="input-group mgz-form-more-bottom">
+                                <span class="input-group-addon">
+                                    <a href="#" class="tooltip-ex" data-original-title="The user that will create this item" data-placement="top">
+                                        <i class="fa fa-user fa-fw"></i>
+                                    </a>
+                                </span>
+                                <div class="form-control">thangchung</div>
+                            </div>                           
+                            
+                            <div class="mgz-form-more-bottom">
+                                <textarea name="editor1">
+                                    <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit.</p>
+                                </textarea>
+                            </div>
+                            <div class="mgz-form-more-bottom">
+                                <textarea name="editor2">
+                                    <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>
+                                </textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <a href="#" class="btn btn-default btn btn-default-default navbar-btn btn-default"><i class="fa fa-floppy-o"></i> Save</a>
+                                <a href="#" class="btn btn-default btn btn-default-default navbar-btn btn-default"><i class="fa fa-undo"></i> Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-purple hover-display-item padding-box">                    
+                    <div class="panel-tools panel-tools-header-item-center">                            
+                        <a data-placement="right" data-original-title="edit item" href="#" class="btn tooltip-ex">
+                            <i class="fa fa-pencil"></i>
+                        </a>                            
+                    </div>                    
+                    <div class="panel-body">                        
+                        <h1><i class="fa fa-th-large"></i> Augue rhoncus cum lectus dapibus et duis in</h1>
+
+                        <p class="pull-left scale-img">
+                            <img src="images/sample.png" width="95%" height="200px">
+                        </p>            
+
+                        <p>Porta nec lectus nascetur nisi quis, in augue dolor, elementum amet egestas pid diam magna, turpis, elementum elementum? Dictumst risus montes? Rhoncus, arcu, turpis elit parturient magnis cursus, ac scelerisque, risus ac, placerat odio nunc placerat, ultricies placerat porta rhoncus dolor rhoncus porttitor amet egestas, et porta dapibus, lacus, nunc placerat ac odio in? Dis? Elit, in. Montes quis diam, tristique integer sed, vut odio ultrices nunc adipiscing, placerat integer, aliquet aliquam, magna et et turpis tincidunt ut, eu velit. Mauris etiam mus pulvinar, proin cras, dolor auctor? A et diam sed ultricies arcu nisi. Hac, lacus, et, lacus phasellus aliquet tincidunt in vut in? Urna a parturient mid cras odio hac massa tortor enim egestas non ultrices pulvinar. Aliquet. Et integer? Ridiculus, sed phasellus amet dignissim porttitor proin, egestas porttitor, velit augue platea? Porttitor pid a pellentesque magnis, nascetur. Scelerisque duis mid! Sit? Ultricies ultricies ut porta scelerisque. Porta integer! Nisi dolor. Nec integer, nunc, urna turpis! Hac adipiscing proin mid duis phasellus dapibus tincidunt sed, elementum urna amet, dolor dignissim odio cursus risus. Hac nunc in eu, nec a in pulvinar integer sit est aenean lorem dis ut lacus, in et risus pid, ac placerat dis urna nec. Porttitor, urna eros enim urna enim! Sed, enim purus? Porttitor penatibus penatibus est habitasse aenean, et elit enim cras platea? Ut! Egestas elit, cum ac non cras amet adipiscing. Placerat lorem auctor et a placerat ultricies, in dictumst nunc.</p>                        
+
+                        <ul class="pager on-bottom">    
+                            <li class="previous"><a href="#"><i class="fa fa-thumbs-up"></i> Like</a></li>    
+                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-comments"></i> Comments</a></li> 
+                            <li class="previous"><a href="#" class="more-space"><i class="fa fa-share-square-o"></i> Share</a></li>                     
+                            <li class="next"><a href="#">More details →</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end right column -->    
+            </div> 
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; 2013 - By <a href="http://twitter.com/thangchung" target="_blank">someone</a></p>
+        </footer>
+    </div>
+    <script src="js/jquery-1.10.2.js"></script>    
+    <script src="js/bootstrap.js"></script>      
+    <script src="js/ckeditor/ckeditor.js"></script>
+    <script>
+        $(function(){            
+            $('.tooltip-ex').tooltip('hide');
+
+            CKEDITOR.replace('editor1');
+            CKEDITOR.replace('editor2');
+        });
+    </script>
+</body>
+</html>
