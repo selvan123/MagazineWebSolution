@@ -13,7 +13,7 @@
 
     [Authorize]
     public class AccountController : Controller
-    {
+    { 
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
