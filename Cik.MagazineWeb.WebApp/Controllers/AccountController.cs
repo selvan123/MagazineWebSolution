@@ -1,4 +1,5 @@
-﻿namespace Cik.MagazineWeb.WebApp.Controllers
+﻿
+namespace Cik.MagazineWeb.WebApp.Controllers
 {
     using System.Threading.Tasks;
     using System.Web;
