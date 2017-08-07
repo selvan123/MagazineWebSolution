@@ -12,7 +12,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [Authorize]
-    public class AccountController : Controller  
+    public class AccountController : Controller
     {
 
         public AccountController()
