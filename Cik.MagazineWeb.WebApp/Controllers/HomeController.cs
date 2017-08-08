@@ -6,6 +6,8 @@ namespace Cik.MagazineWeb.WebApp.Controllers
     using Cik.MagazineWeb.Application;
     using Cik.Web.Utilities;
 
+
+
     public class HomeController : ControllerBase
     {
         private readonly IMagazineApplication _magazineApplication;
