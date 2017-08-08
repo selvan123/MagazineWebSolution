@@ -15,6 +15,7 @@ namespace Cik.MagazineWeb.WebApp.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        int temp = 0; 
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
